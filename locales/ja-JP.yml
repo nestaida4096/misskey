@@ -178,7 +178,7 @@ cacheRemoteSensitiveFiles: "リモートのセンシティブなファイルを�
 cacheRemoteSensitiveFilesDescription: "この設定を無効にすると、リモートのセンシティブなファイルはキャッシュせず直リンクするようになります。"
 flagAsBot: "Botとして設定"
 flagAsBotDescription: "このアカウントがプログラムによって運用される場合は、このフラグをオンにします。オンにすると、反応の連鎖を防ぐためのフラグとして他の開発者に役立ったり、Misskeyのシステム上での扱いがBotに合ったものになります。"
-flagAsCat: "flagAsCatモード"
+flagAsCat: "猫として設定"
 flagAsCatDescription: "このアカウントが猫によって運用される場合は、このフラグをオンにします。"
 flagShowTimelineReplies: "タイムラインにノートへの返信を表示する"
 flagShowTimelineRepliesDescription: "オンにすると、タイムラインにユーザーのノート以外にもそのユーザーの他のノートへの返信を表示します。"
