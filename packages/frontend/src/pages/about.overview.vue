@@ -33,7 +33,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 			</FormLink>
 			<FormLink to="/about-nestmisskey">
 				<template #icon><i class="ti ti-info-circle"></i></template>
-				About NESTMisskey
+				{{ i18n.ts.aboutNESTMisskey }}
 			</FormLink>
 			<FormLink v-if="instance.repositoryUrl || instance.providesTarball" :to="instance.repositoryUrl || `/tarball/misskey-${version}.tar.gz`" external>
 				<template #icon><i class="ti ti-code"></i></template>

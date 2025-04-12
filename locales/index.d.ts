@@ -1803,6 +1803,10 @@ export interface Locale extends ILocale {
      */
     "aboutMisskey": string;
     /**
+     * NESTMisskeyについて
+     */
+    "aboutNESTMisskey": string;
+    /**
      * 管理者
      */
     "administrator": string;

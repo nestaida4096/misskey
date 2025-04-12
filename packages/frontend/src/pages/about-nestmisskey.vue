@@ -27,27 +27,18 @@
     
 <script lang="ts" setup>
     import { nextTick, onBeforeUnmount, ref, useTemplateRef, computed } from 'vue';
-    import { version } from '@@/js/config.js';
     import FormLink from '@/components/form/link.vue';
     import FormSection from '@/components/form/section.vue';
-    import MkButton from '@/components/MkButton.vue';
-    import MkInfo from '@/components/MkInfo.vue';
-    import { physics } from '@/utility/physics.js';
     import { i18n } from '@/i18n.js';
-    import { instance } from '@/instance.js';
-    import * as os from '@/os.js';
     import { definePage } from '@/page.js';
-    import { claimAchievement, claimedAchievements } from '@/utility/achievements.js';
-    import { $i } from '@/i.js';
-    import { prefer } from '@/preferences.js';
     
     const headerActions = computed(() => []);
 
     const headerTabs = computed(() => []);
 
     definePage(() => ({
-	    title: i18n.ts.instanceInfo,
-	    icon: 'ti ti-info-circle',
+	    title: i18n.ts.aboutNESTMisskey,
+	    icon: null,
     }));
 </script>
     
