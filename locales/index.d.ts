@@ -731,11 +731,11 @@ export interface Locale extends ILocale {
      */
     "flagAsBotDescription": string;
     /**
-     * にゃああああああああああああああ！！！！！！！！！！！！
+     * 猫として設定
      */
     "flagAsCat": string;
     /**
-     * にゃにゃにゃ？？
+     * このアカウントが猫によって運用される場合は、このフラグをオンにします。
      */
     "flagAsCatDescription": string;
     /**
