@@ -31,7 +31,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 				<template #icon><i class="ti ti-info-circle"></i></template>
 				{{ i18n.ts.aboutMisskey }}
 			</FormLink>
-			<FormLink :to=instance.repositoryUrl external>
+			<FormLink to="https://github.com/nestaida4096/misskey/blob/misskey-test/about-nestmisskey.md" external>
 				<template #icon><i class="ti ti-info-circle"></i></template>
 				NESTMisskeyについて
 			</FormLink>
