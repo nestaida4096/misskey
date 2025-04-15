@@ -30,6 +30,7 @@ import { pleaseLogin } from '@/utility/please-login.js';
 import { showMovedDialog } from '@/utility/show-moved-dialog.js';
 import { getHTMLElementOrNull } from '@/utility/get-dom-node-or-null.js';
 import { focusParent } from '@/utility/focus.js';
+import { playMisskeySfxFile, soundsTypes, getSoundDuration } from '@/utility/sound.js';
 
 export const openingWindowsCount = ref(0);
 
@@ -84,6 +85,10 @@ export const apiWithDialog = (<E extends keyof Misskey.Endpoints, P extends Miss
 			title = customErrors[err.id].title;
 			text = customErrors[err.id].text;
 		}
+		playMisskeySfxFile({
+			type: "syuilo/triple",
+			volume: 1
+		});
 		alert({
 			type: 'error',
 			title,

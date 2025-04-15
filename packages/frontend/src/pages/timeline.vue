@@ -249,6 +249,11 @@ function switchTlIfNeeded() {
 try {
 	ensureSignin();
 } catch(e) {
+	os.alert({
+		"type": "error",
+		"title": "ログインしていません",
+		"text": ""
+	})
 	router.replace("/")
 }
 
