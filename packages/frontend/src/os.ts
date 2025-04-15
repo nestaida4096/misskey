@@ -85,10 +85,6 @@ export const apiWithDialog = (<E extends keyof Misskey.Endpoints, P extends Miss
 			title = customErrors[err.id].title;
 			text = customErrors[err.id].text;
 		}
-		playMisskeySfxFile({
-			type: "syuilo/triple",
-			volume: 1
-		});
 		alert({
 			type: 'error',
 			title,
