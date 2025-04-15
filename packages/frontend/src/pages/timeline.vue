@@ -43,7 +43,7 @@ import MkPostForm from '@/components/MkPostForm.vue';
 import * as os from '@/os.js';
 import { store } from '@/store.js';
 import { i18n } from '@/i18n.js';
-import { $i } from '@/i.js';
+import { $i, ensureSignin } from '@/i.js';
 import { definePage } from '@/page.js';
 import { antennasCache, userListsCache, favoritedChannelsCache } from '@/cache.js';
 import { deviceKind } from '@/utility/device-kind.js';
@@ -52,6 +52,8 @@ import { miLocalStorage } from '@/local-storage.js';
 import { availableBasicTimelines, hasWithReplies, isAvailableBasicTimeline, isBasicTimeline, basicTimelineIconClass } from '@/timelines.js';
 import { prefer } from '@/preferences.js';
 import { useRouter } from '@/router.js';
+import MkSigninDialog from '@/components/MkSigninDialog.vue';
+import MkSigninInput from '@/components/MkSignin.input.vue';
 
 provide('shouldOmitHeaderTitle', true);
 
@@ -241,6 +243,13 @@ function switchTlIfNeeded() {
 	if (isBasicTimeline(src.value) && !isAvailableBasicTimeline(src.value)) {
 		src.value = availableBasicTimelines()[0];
 	}
+}
+
+//ログインしてなければindexへ移動
+try {
+	ensureSignin();
+} catch(e) {
+	router.replace("/")
 }
 
 onMounted(() => {
